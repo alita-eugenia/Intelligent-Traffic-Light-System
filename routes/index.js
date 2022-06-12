@@ -14,6 +14,10 @@ router.get('/getTraffics', getTraffics);
 router.get('/getTrafficByName', getTrafficByName);
 // Route create Traffic
 router.post('/createTraffic', createTraffic);
+
+router.get('/', (req, res) => {
+    res.send('Welcome Traffic')
+  })
  
 // export router
 export default router;

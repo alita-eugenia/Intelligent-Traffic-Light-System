@@ -8,9 +8,9 @@ import route from "./routes/index.js";
 import cors from "cors";
 // construct express function
 const app = express();
- 
+
 // connect ke database mongoDB
-mongoose.connect("mongodb://localhost:27017/traffic",{ 
+mongoose.connect("mongodb+srv://irfa-admin:admin1@traffic.lhb63.mongodb.net/traffic?retryWrites=true&w=majority",{ 
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -24,4 +24,4 @@ app.use(express.json());
 app.use('/traffic',route);
  
 // listening to port
-app.listen('3000',()=> console.log('Server Running at port: 3000'));
+app.listen('8080',()=> console.log('Server Running at port: 8080'));
